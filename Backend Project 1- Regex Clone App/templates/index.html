@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Regular Expression </title>
+    <style>
+    body{
+        background-color: #cfd1cf;
+    }
+    label {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    /* Add styles for when the label is hovered */
+    label:hover {
+      color: #e61919;
+      cursor: pointer;
+    }
+
+    input[type="text"] {
+      border: 2px solid #ccc;
+      background-color: #f8f8f8;
+      font-size: 18px;
+      padding: 10px;
+      width: 300px;
+    }
+    input[type="text"]:focus {
+      border-color: #6cb2eb;
+      box-shadow: 0 0 5px rgba(108,178,235,0.5);
+    }
+
+    input[type="submit"] {
+      background-color: #010c14;
+      color: #fdfbfb;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Add styles for when the button is hovered */
+    input[type="submit"]:hover {
+      background-color: #ee2e2e;
+    }
+    
+    /* Add styles for when the button is pressed */
+    input[type="submit"]:active {
+      background-color: #080808;
+    }
+    </style>
+</head>
+<body>
+    <h1>REGEX</h1>
+    <form method="POST">
+        <label for="text_string">Text String :</label>
+        <input type="text" id="text_string" name="text_string"><br>
+        <label for="regex">Regular Expression :</label>
+        <input type="text" id="regex" name="regex"><br>
+        <input type="submit" value="Check">
+    </form>
+    {% if matches %}
+        <h2>Matches:</h2>
+        <ul>
+            {% for match in matches %}
+               <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            h1{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }       
+            ul li{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            } 
+            a{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Notes</h1>
+        <ul>
+            {% for note in notes%}
+                <li>{{note}}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{url_for('index')}}">Home</a>
+    </body>
+</html>
